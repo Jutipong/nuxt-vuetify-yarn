@@ -23,8 +23,8 @@ const user = ref({
 				<v-card class="mx-auto pa-12 pb-8" elevation="8" max-width="450" rounded="lg">
 					<v-form @submit.prevent="logIn(user.username, user.password)">
 						<v-img
-							class="mx-auto my-6"
-							max-width="228"
+							class="mx-auto ma-16"
+							max-width="250"
 							src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"></v-img>
 
 						<v-text-field

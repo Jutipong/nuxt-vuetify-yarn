@@ -9,4 +9,4 @@ type UserLogin = {
 	token: string;
 };
 
-export type { Auth, UserLogin };
+export type { UserLogin };

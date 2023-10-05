@@ -2,26 +2,33 @@ import { LightTheme } from './theme/config';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	ssr: false,
-	typescript: {
-		shim: false,
-	},
-	imports: {
-		dirs: ['stores'],
-	},
-	app: {
-		pageTransition: { name: 'page', mode: 'out-in' },
-	},
-	vuetify: {
-		vuetifyOptions: {
-			theme: {
-				defaultTheme: 'LightTheme',
-				themes: {
-					LightTheme,
-				},
-			},
-		},
-	},
+  ssr: false,
+  typescript: {
+    shim: false,
+  },
+  app: {
+    keepalive: true,
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+  imports: {
+    dirs: ['stores'],
+  },
+  vue: {
+    propsDestructure: true,
+  },
+  vuetify: {
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'LightTheme',
+        themes: {
+          LightTheme,
+        },
+      },
+    },
+    moduleOptions: {
+      useVuetifyLabs: true,
+    },
+  },
 
-	modules: ['@invictus.codes/nuxt-vuetify', '@pinia/nuxt'],
+  modules: ['@invictus.codes/nuxt-vuetify', '@pinia/nuxt'],
 });

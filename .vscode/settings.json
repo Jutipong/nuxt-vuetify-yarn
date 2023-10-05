@@ -1,12 +1,12 @@
 {
-	"cSpell.words": ["invictus", "Nuxi", "nuxt", "pinia", "vuetify"],
-	"files.exclude": {
-		"**/.git": true,
-		"**/.svn": true,
-		"**/.hg": true,
-		"**/CVS": true,
-		"**/.DS_Store": true,
-		"**/Thumbs.db": true,
-		"**/node_modules": true
-	}
+  "cSpell.words": ["datas", "invictus", "Nuxi", "nuxt", "pinia", "vuetify"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  }
 }

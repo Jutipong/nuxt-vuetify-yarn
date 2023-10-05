@@ -10,7 +10,7 @@ export const useProductStore = defineStore('product', () => {
 
   async function getProducts(option: Option) {
     state.loading = true;
-
+    console.log('option', option);
     const { data }: any = await useFetch(
       `https://dummyjson.com/products?limit=${option.itemsPerPage}&skip=${option.page}`,
       {

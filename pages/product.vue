@@ -5,8 +5,9 @@ const productStore = useProductStore();
 const search = ref<string | undefined>();
 
 const serverItems = ref<Product[]>([]);
-const totalItems = ref(0);
-const itemsPerPage = ref(5);
+const total = ref(0);
+const perPage = ref(5);
+
 const headers = ref<Header[]>([
   { title: 'ID', key: 'id', align: 'center' },
   { title: 'Title', key: 'title' },
@@ -17,23 +18,20 @@ const headers = ref<Header[]>([
 ]);
 
 async function loadItems(option: Option) {
+  console.log(option);
   const result = await productStore.getProducts(option);
 
   serverItems.value = result.datas;
-  totalItems.value = result.total;
+  total.value = result.total;
 }
-
-onMounted(() => {
-  loadItems({ page: 1, itemsPerPage: 5, sortBy: [] } as Option);
-});
 </script>
 
 <template>
   <div>
     <v-data-table-server
-      v-model:items-per-page="itemsPerPage"
+      v-model:items-per-page="perPage"
       :headers="headers"
-      :items-length="totalItems"
+      :items-length="total"
       :items="serverItems"
       :loading="productStore.state.loading"
       class="elevation-1"

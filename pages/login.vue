@@ -20,7 +20,11 @@ const user = ref({
   <div fluid class="d-flex fill-height align-center justify-center">
     <v-row>
       <v-col>
-        <v-card class="mx-auto pa-12 pb-8" elevation="8" max-width="450" rounded="lg">
+        <v-card
+          class="mx-auto pa-12 pb-8"
+          elevation="8"
+          max-width="450"
+          rounded="lg">
           <v-form @submit.prevent="logIn(user.username, user.password)">
             <v-img
               class="mx-auto ma-16"
@@ -28,17 +32,17 @@ const user = ref({
               src="https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-v3-slim-text-light.svg"></v-img>
 
             <v-text-field
-              density="compact"
+              class="mb-2"
               placeholder="User Name"
-              prepend-inner-icon="mdi-account"
+              prepend-inner-icon="carbon:user"
               variant="outlined"
               v-model="user.username">
             </v-text-field>
 
             <v-text-field
+              class="mb-4"
               :append-inner-icon="user.visible ? 'mdi-eye-off' : 'mdi-eye'"
               :type="user.visible ? 'text' : 'password'"
-              density="compact"
               placeholder="Enter your password"
               prepend-inner-icon="mdi-lock-outline"
               variant="outlined"

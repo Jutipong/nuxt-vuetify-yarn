@@ -24,7 +24,7 @@ const LightTheme: ThemeDefinition = {
     error: '#C10015',
     info: '#31CCEC',
     success: '#21BA45',
-    warning: '#FFAE1F',
+    warning: '#ffbe4e',
   },
 };
 export { LightTheme, PurpleTheme };

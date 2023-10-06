@@ -18,7 +18,6 @@ const headers = ref<Header[]>([
 ]);
 
 async function loadItems(option: Option) {
-  console.log(option);
   const result = await productStore.getProducts(option);
 
   serverItems.value = result.datas;

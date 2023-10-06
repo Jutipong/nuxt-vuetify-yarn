@@ -4,13 +4,6 @@ export type Option = {
   sortBy: SortBy[];
 };
 
-export type Result<T> = {
-  datas: T[];
-  total: number;
-  skip: number;
-  limit: number;
-};
-
 export type SortBy = {
   key: string;
   order: string;
@@ -21,4 +14,9 @@ export type Header = {
   align?: 'start' | 'center' | 'end';
   sortable?: false | true;
   key: string;
+};
+
+export type Result<T> = {
+  datas: T[];
+  total: number;
 };

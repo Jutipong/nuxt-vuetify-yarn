@@ -12,7 +12,7 @@ export const useProductStore = defineStore('product', () => {
     state.loading = true;
     console.log('option', option);
     const { data }: any = await useFetch(
-      `https://dummyjson.com/products?limit=${option.itemsPerPage}&skip=${option.page}`,
+      `https://dummyjson.com/products?limit=${option.itemsPerPage}&skip=${option.page - 1}`,
       {
         method: 'get',
         headers: { 'Content-Type': 'application/json' },

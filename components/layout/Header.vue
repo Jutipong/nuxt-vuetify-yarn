@@ -11,8 +11,7 @@ const authStore = useAuthStore();
     <v-app-bar-title>{{ layoutStore.title }} </v-app-bar-title>
 
     <template v-slot:append>
-      <v-btn color="error" @click="authStore.logOut">
-        <Icon name="mdi-logout" />
+      <v-btn color="error" prepend-icon="mdi-logout" @click="authStore.logOut">
         Logout
       </v-btn>
     </template>

@@ -19,5 +19,10 @@ export default defineNuxtConfig({
   vuetify: {
     ...vuetifyConfig,
   },
-  modules: ['@invictus.codes/nuxt-vuetify', '@pinia/nuxt', 'nuxt-icon'],
+  modules: [
+    '@invictus.codes/nuxt-vuetify',
+    '@pinia/nuxt',
+    'nuxt-icon',
+    '@nuxtjs/tailwindcss',
+  ],
 });
